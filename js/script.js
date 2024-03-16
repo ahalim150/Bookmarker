@@ -15,9 +15,30 @@ function addBookmark(){
   }
   
   if (isValidURL(siteURLInput.value)) {
+    const Toast = Swal.mixin({
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+      timer: 3000,
+      timerProgressBar: true,
+      didOpen: (toast) => {
+        toast.onmouseenter = Swal.stopTimer;
+        toast.onmouseleave = Swal.resumeTimer;
+      }
+    });
+    Toast.fire({
+      icon: "success",
+      title: "Bookmark has been added"
+    });
+
     bookmarks.push(bookmark);
+
   } else {
-    alert("Invalid URL");
+    Swal.fire({
+    title: "invalid URL",
+    text: "pls insert a valid URL",
+    icon: "error"
+});
   }
 
   localStorage.setItem("bookmarks", JSON.stringify(bookmarks))
