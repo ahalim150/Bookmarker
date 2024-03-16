@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="position-relative text-center mb-5">
+            Bookmarker
+        </h1>
+        <hr class="dotted">
+
+        <h3 class="mb-5 text-center"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h3>
+
+        <label for="siteName" class="mb-2 fw-semibold"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+        <input type="text" id="siteName" class="form-control mb-4" placeholder="Ex. youtube">
+
+        <label for="siteURL" class="mb-2 fw-semibold"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+        <input type="text" id="siteURL" class="form-control mb-4" placeholder="Ex. https://www.example.com">
+
+        <div class="text-center">
+        <button id="submitURL" onclick="addBookmark()" class="btn btn-danger px-5 mb-3">submit</button>
+        </div>
+
+        <hr class="dotted">
+
+        <table class="table text-white text-center">
+            <thead>
+                <th>Index</th>
+                <th>Site Name</th>
+                <th>Visit</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tBody">
+
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.10.6/dist/sweetalert2.all.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>

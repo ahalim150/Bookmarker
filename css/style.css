@@ -1,0 +1,44 @@
+body {
+    background-color: rgb(250, 232, 234) !important;
+    color: #352e28 !important;
+  }
+
+::selection {
+    background-color: #fec260;
+    color: #352e28;
+  }
+
+h1 {
+    font-family: "Pacifico", cursive;
+    color: #352e28;
+  }
+  
+h1::before {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 25%;
+    left: 40%;
+    bottom: 5px;
+    background-color: #fec260;
+    transition: 0.5s;
+    z-index: -1;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+  
+h1:hover::before {
+    height: 50%;
+  }
+
+h3{
+    background-image: linear-gradient(to right, #082e13, #ffea00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+hr.dotted {
+  border-top: 2px dotted #000;
+}
